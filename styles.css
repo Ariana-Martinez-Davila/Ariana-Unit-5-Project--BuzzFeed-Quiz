@@ -1,0 +1,54 @@
+body {
+color: white;
+    font-family: 'Satsfy';
+    background-color: #2af4f7;
+    text-align: center;
+    background-image: url("https://img.freepik.com/free-vector/elegant-background-red-gold_1048-12306.jpg");
+   
+
+ 
+}
+
+
+.container,
+.results
+ {
+    width: 400px;
+    padding: 10px;
+    margin: 50px auto;
+    border: 5px solid  #f09443;
+    border-radius: 20px;
+    background-color: #7B0706;
+    transition: background-color .5s ease-in-out;
+    transition: border .2s ease-in-out;
+     color: black;
+}
+
+.container:hover {
+    background-color: white;
+    border-color: white;
+}
+
+
+img {
+    width: 400px;
+     border: 5px #f09443 solid;
+}
+.result{
+  display:none;
+}
+.Phillip{
+  display: none;
+}
+.Naveen{
+  display: none;
+}
+.Shang{
+  display: none;
+}
+.Flynn{
+  display: none;
+}
+.tryAgain{
+  display:none;
+}
