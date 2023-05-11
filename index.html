@@ -1,0 +1,163 @@
+<!DOCTYPE html> <html><head>
+        <title>Ariana Unit 5 Project - BuzzFeed Quiz</title>
+    <style>body {
+color: white;
+    font-family: 'Satsfy';
+    background-color: #2af4f7;
+    text-align: center;
+    background-image: url("https://img.freepik.com/free-vector/elegant-background-red-gold_1048-12306.jpg");
+   
+
+ 
+}
+
+
+.container,
+.results
+ {
+    width: 400px;
+    padding: 10px;
+    margin: 50px auto;
+    border: 5px solid  #f09443;
+    border-radius: 20px;
+    background-color: #7B0706;
+    transition: background-color .5s ease-in-out;
+    transition: border .2s ease-in-out;
+     color: black;
+}
+
+.container:hover {
+    background-color: white;
+    border-color: white;
+}
+
+
+img {
+    width: 400px;
+     border: 5px #f09443 solid;
+}
+.result{
+  display:none;
+}
+.Phillip{
+  display: none;
+}
+.Naveen{
+  display: none;
+}
+.Shang{
+  display: none;
+}
+.Flynn{
+  display: none;
+}
+.tryAgain{
+  display:none;
+}</style></head>
+    <body>
+        <div class="title">
+    <h1>Who is your Prince Charming?</h1>
+    <img src="https://featuredanimation.com/wp-content/uploads/2021/09/All-10-Official-Princes.jpg" alt="All Disney Princes">
+            
+  </div>
+  <div class="questions">
+       <div class="container">
+    <h4>Pick a number between 1- 5</h4>
+    <input class="Question1" placeholder="Write a number 1-5">
+    <h4>Are you an Introvert or Extrovert?</h4>
+    <input class="Question2" placeholder="Introvert or Extrovert">
+      <h4>Pick a color:
+      </h4>
+      <input class="Question3" placeholder="Red or Blue?">
+             
+  </div>
+  <br>
+  <button>Submit Here!</button>
+  <br>      
+
+  <div class="result">
+    this is where the user will see their quiz result!
+  </div>
+  <!-- Choose Next Level Feature - Lesson 5.2 - Add pictures for user results -->
+  <div class="Phillip">
+           <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0137dbc2-0236-4004-96d8-fee9ebcb7c2b/dep1cqu-36893572-0cba-48ab-8015-33cf7b96a149.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAxMzdkYmMyLTAyMzYtNDAwNC05NmQ4LWZlZTllYmNiN2MyYlwvZGVwMWNxdS0zNjg5MzU3Mi0wY2JhLTQ4YWItODAxNS0zM2NmN2I5NmExNDkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.59GFSsG_Xa3ZreaEogJKNvmi3uEOFrECVKjP98SIu0U" alt="Prince Phillip img">
+        </div>
+        <div class="Naveen">
+            <img src="https://64.media.tumblr.com/1cf2ef67b3c969ca82cc34e90e980005/tumblr_pn83nvDdrx1vt10pl_540.jpg" alt="Prince Naveen img">
+        </div>
+        
+        <div class="Shang">
+            <img src="https://pbs.twimg.com/media/EZzbNz0XYAw0138?format=jpg&amp;name=4096x4096" alt="Lishang img">
+        </div>
+        
+        <div class="Flynn">
+            <img src="https://www.everythingmouse.com/wp-content/uploads/2021/02/flynnridertangled.jpeg" alt="Flynn R img">
+  </div>
+  <div>
+    <img class="tryAgain" src="https://images.slideplayer.com/27/9212147/slides/slide_25.jpg" alt="Emoji try again img meme">
+  </div>
+        </div>
+    
+      
+
+
+        
+   
+ <script>
+/*__POPCODESTART__*/
+var Phillip = document.querySelector(".Phillip");
+var Naveen = document.querySelector(".Naveen");
+var LiShang = document.querySelector(".Shang");
+var Flynn = document.querySelector(".Flynn");
+var tryAgain = document.querySelector(".tryAgain");
+var results = document.querySelector(".result");
+var button = document.querySelector("button"); //Write a click handler
+
+button.onclick = function () {
+  var HS = document.querySelector(".Question1").value;
+  var ExIn = document.querySelector(".Question2").value;
+  var Clr = document.querySelector(".Question3").value;
+
+  if (HS >= 3 && HS <= 5 && (ExIn === "Introvert" || ExIn === "introvert") && (Clr === "Red" || Clr === "red")) {
+    results.style.display = "block";
+    results.innerHTML = "You chose the number" + " " + HS + ", you are an" + " " + ExIn + " " + "and you like  the color" + " " + Clr + "." + " " + "Which means your prince charming is PRINCE PHILLIP";
+    Phillip.style.display = "block";
+    Naveen.style.display = "none";
+    LiShang.style.display = "none";
+    Flynn.style.display = "none";
+    tryAgain.style.display = "none";
+  } else if (HS >= 3 && HS <= 5 && (ExIn === "Extrovert" || ExIn === "extrovert") && (Clr === "Blue" || Clr === "blue")) {
+    results.style.display = "block";
+    results.innerHTML = "You chose the number" + " " + HS + "! You are an" + " " + ExIn + " " + "and you like  the color" + " " + Clr + "." + " " + "Which means your prince charming is PRINCE NAVEEN";
+    Naveen.style.display = "block";
+    Phillip.style.display = "none";
+    LiShang.style.display = "none";
+    Flynn.style.display = "none";
+    tryAgain.style.display = "none";
+  } else if (HS >= 0 && HS <= 2 && (ExIn === "Extrovert" || ExIn === "extrovert") && (Clr === "Red" || Clr === "red")) {
+    results.style.display = "block";
+    results.innerHTML = "You chose the number" + " " + HS + "! You are an" + " " + ExIn + " " + "and you like  the color" + " " + Clr + "." + " " + "Which means your prince charming is Prince LI SHANG";
+    LiShang.style.display = "block";
+    Naveen.style.display = "none";
+    Phillip.style.display = "none";
+    Flynn.style.display = "none";
+    tryAgain.style.display = "none";
+  } else if (HS >= 0 && HS <= 2 && (ExIn === "Introvert" || ExIn === "introvert") && (Clr === "Blue" || Clr === "blue")) {
+    results.style.display = "block";
+    results.innerHTML = "You chose the number" + " " + HS + "! You are an" + " " + ExIn + " " + "and you like  the color" + " " + Clr + "." + " " + "Which means your prince charming is FLYNN RIDER";
+    Flynn.style.display = "block";
+    Naveen.style.display = "none";
+    Phillip.style.display = "none";
+    LiShang.style.display = "none";
+    tryAgain.style.display = "none";
+  } else {
+    results.style.display = "block";
+    results.innerHTML = "TRY AGAIN - do not match our possible answers";
+    tryAgain.style.display = "block";
+    Naveen.style.display = "none";
+    Phillip.style.display = "none";
+    LiShang.style.display = "none";
+    Flynn.style.display = "none";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIlBoaWxsaXAiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJOYXZlZW4iLCJMaVNoYW5nIiwiRmx5bm4iLCJ0cnlBZ2FpbiIsInJlc3VsdHMiLCJidXR0b24iLCJvbmNsaWNrIiwiSFMiLCJ2YWx1ZSIsIkV4SW4iLCJDbHIiLCJzdHlsZSIsImRpc3BsYXkiLCJpbm5lckhUTUwiXSwibWFwcGluZ3MiOiJBQUNBLElBQUlBLE9BQU8sR0FBRUMsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWI7QUFDQSxJQUFJQyxNQUFNLEdBQUNGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFYO0FBQ0EsSUFBSUUsT0FBTyxHQUFDSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBWjtBQUNBLElBQUlHLEtBQUssR0FBQ0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQVY7QUFDQSxJQUFJSSxRQUFRLEdBQUNMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixXQUF2QixDQUFiO0FBQ0EsSUFBSUssT0FBTyxHQUFDTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBWjtBQUVBLElBQUlNLE1BQU0sR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQWIsQyxDQUNBOztBQUNBTSxNQUFNLENBQUNDLE9BQVAsR0FBZSxZQUFVO0FBQ3pCLE1BQUlDLEVBQUUsR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDUyxLQUE5QztBQUNBLE1BQUlDLElBQUksR0FBR1gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDUyxLQUFoRDtBQUNBLE1BQUlFLEdBQUcsR0FBR1osUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLEVBQXFDUyxLQUEvQzs7QUFHRSxNQUFJRCxFQUFFLElBQUksQ0FBTixJQUFXQSxFQUFFLElBQUUsQ0FBaEIsS0FBdUJFLElB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LENBQUNXLEtBQVAsQ0FBYUMsT0FBYixHQUFxQixNQUFyQjtBQUNBZixJQUFBQSxPQUFPLENBQUNjLEtBQVIsQ0FBY0MsT0FBZCxHQUFzQixNQUF0QjtBQUNBWCxJQUFBQSxPQUFPLENBQUNVLEtBQVIsQ0FBY0MsT0FBZCxHQUFzQixNQUF0QjtBQUNBVixJQUFBQSxLQUFLLENBQUNTLEtBQU4sQ0FBWUMsT0FBWixHQUFvQixNQUFwQjtBQUVGO0FBQ0YsQ0EzREQiLCJzb3VyY2VzQ29udGVudCI6WyJcbmxldCBQaGlsbGlwID1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLlBoaWxsaXBcIik7XG5sZXQgTmF2ZWVuPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuTmF2ZWVuXCIpO1xubGV0IExpU2hhbmc9ZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5TaGFuZ1wiKTtcbmxldCBGbHlubj1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLkZseW5uXCIpO1xubGV0IHRyeUFnYWluPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIudHJ5QWdhaW5cIik7XG5sZXQgcmVzdWx0cz1kb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcblxubGV0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIik7XG4vL1dyaXRlIGEgY2xpY2sgaGFuZGxlclxuYnV0dG9uLm9uY2xpY2s9ZnVuY3Rpb24oKXtcbmxldCBIUyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuUXVlc3Rpb24xXCIpLnZhbHVlO1xubGV0IEV4SW4gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLlF1ZXN0aW9uMlwiKS52YWx1ZTtcbmxldCBDbHIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLlF1ZXN0aW9uM1wiKS52YWx1ZTtcbiAgXG5cbiAgaWYoKEhTID49IDMgJiYgSFM8PTUpICYmIChFeEluID09PVwiSW50cm92ZXJ0XCIgfHwgICAgICAgRXhJbj09PVwiaW50cm92ZXJ0XCIpICYmIChDbHIgPT09IFwiUmVkXCIgfHwgQ2xyPT09XCJyZWRcIikpe1xuICAgIHJlc3VsdHMuc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgcmVzdWx0cy5pbm5lckhUTUwgPSBcIllvdSBjaG9zZSB0aGUgbnVtYmVyXCIgKyBcIiBcIiArSFMrIFwiLCB5b3UgYXJlIGFuXCIgKyBcIiBcIiArIEV4SW4gKyBcIiBcIiArIFwiYW5kIHlvdSBsaWtlICB0aGUgY29sb3JcIisgXCIgXCIgKyBDbHIrIFwiLlwiICsgXCIgXCIgKyBcIldoaWNoIG1lYW5zIHlvdXIgcHJpbmNlIGNoYXJtaW5nIGlzIFBSSU5DRSBQSElMTElQXCI7XG4gICAgUGhpbGxpcC5zdHlsZS5kaXNwbGF5PVwiYmxvY2tcIjtcbiAgICAgIE5hdmVlbi5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICAgTGlTaGFuZy5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICAgRmx5bm4uc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbiAgICAgIHRyeUFnYWluLnN0eWxlLmRpc3BsYXk9XCJub25lXCI7XG4gIH0gXG4gICAgIFxuICAgIGVsc2UgaWYoKEhTID49IDMgJiYgSFM8PTUpICYmXG4gICAgICAgICAgICAoRXhJbiA9PT0gXCJFeHRyb3ZlcnRcIiB8fCBFeEluPT09XCJleHRyb3ZlcnRcIikgJiYgKENsciA9PT0gXCJCbHVlXCIgfHwgQ2xyID09PSBcImJsdWVcIikpe1xuICAgICAgcmVzdWx0cy5zdHlsZS5kaXNwbGF5PVwiYmxvY2tcIjtcbiAgICAgIHJlc3VsdHMuaW5uZXJIVE1MID0gIFwiWW91IGNob3NlIHRoZSBudW1iZXJcIiArIFwiIFwiICtIUysgXCIhIFlvdSBhcmUgYW5cIiArIFwiIFwiICsgRXhJbiArIFwiIFwiICsgXCJhbmQgeW91IGxpa2UgIHRoZSBjb2xvclwiKyBcIiBcIiArIENscisgXCIuXCIgKyBcIiBcIiArIFwiV2hpY2ggbWVhbnMgeW91ciBwcmluY2UgY2hhcm1pbmcgaXMgUFJJTkNFIE5BVkVFTlwiO1xuICAgICAgTmF2ZWVuLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgICAgUGhpbGxpcC5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICAgTGlTaGFuZy5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICAgRmx5bm4uc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbiAgICAgIHRyeUFnYWluLnN0eWxlLmRpc3BsYXk9XCJub25lXCI7XG4gICAgfVxuICAgIGVsc2UgaWYoKEhTPj0wICYmIEhTPD0yKSAmJlxuICAgICAoRXhJbiA9PT0gXCJFeHRyb3ZlcnRcIiB8fCBFeEluID09PSBcImV4dHJvdmVydFwiKSAmJlxuICAgICAgICAgICAgKENsciA9PT0gXCJSZWRcIiB8fCBDbHIgPT09XCJyZWRcIikpe1xuICAgICAgIHJlc3VsdHMuc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgICByZXN1bHRzLmlubmVySFRNTCA9ICBcIllvdSBjaG9zZSB0aGUgbnVtYmVyXCIgKyBcIiBcIiArSFMrIFwiISBZb3UgYXJlIGFuXCIgKyBcIiBcIiArIEV4SW4gKyBcIiBcIiArIFwiYW5kIHlvdSBsaWtlICB0aGUgY29sb3JcIisgXCIgXCIgKyBDbHIrIFwiLlwiICsgXCIgXCIgKyBcIldoaWNoIG1lYW5zIHlvdXIgcHJpbmNlIGNoYXJtaW5nIGlzIFByaW5jZSBMSSBTSEFOR1wiO1xuICAgICBMaVNoYW5nLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgICBOYXZlZW4uc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbiAgICAgUGhpbGxpcC5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICBGbHlubi5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICB0cnlBZ2Fpbi5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgIH1cbiAgICBcbiAgICBlbHNlIGlmKChIUz49MCAmJiBIUzw9MikgJiZcbiAgICAgIChFeEluID09PSBcIkludHJvdmVydFwiIHx8IEV4SW49PT1cImludHJvdmVydFwiKSAmJlxuICAgICAgICAgICAgKENsciA9PT0gXCJCbHVlXCIgfHwgQ2xyPT09XCJibHVlXCIpKXtcbiAgICAgICAgcmVzdWx0cy5zdHlsZS5kaXNwbGF5PVwiYmxvY2tcIjtcbiAgICAgIHJlc3VsdHMuaW5uZXJIVE1MID0gIFwiWW91IGNob3NlIHRoZSBudW1iZXJcIiArIFwiIFwiICtIUysgXCIhIFlvdSBhcmUgYW5cIiArIFwiIFwiICsgRXhJbiArIFwiIFwiICsgXCJhbmQgeW91IGxpa2UgIHRoZSBjb2xvclwiKyBcIiBcIiArIENscisgXCIuXCIgKyBcIiBcIiArIFwiV2hpY2ggbWVhbnMgeW91ciBwcmluY2UgY2hhcm1pbmcgaXMgRkxZTk4gUklERVJcIjtcbiAgICAgRmx5bm4uc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgIE5hdmVlbi5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICBQaGlsbGlwLnN0eWxlLmRpc3BsYXk9XCJub25lXCI7XG4gICAgIExpU2hhbmcuc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbiAgICAgdHJ5QWdhaW4uc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbn1cbiAgICBlbHNle1xuICAgIHJlc3VsdHMuc3R5bGUuZGlzcGxheT1cImJsb2NrXCI7XG4gICAgcmVzdWx0cy5pbm5lckhUTUwgPSBcIlRSWSBBR0FJTiAtIGRvIG5vdCBtYXRjaCBvdXIgcG9zc2libGUgYW5zd2Vyc1wiO1xuICAgIHRyeUFnYWluLnN0eWxlLmRpc3BsYXk9XCJibG9ja1wiO1xuICAgICBOYXZlZW4uc3R5bGUuZGlzcGxheT1cIm5vbmVcIjtcbiAgICAgUGhpbGxpcC5zdHlsZS5kaXNwbGF5PVwibm9uZVwiO1xuICAgICBMaVNoYW5nLnN0eWxlLmRpc3BsYXk9XCJub25lXCI7XG4gICAgIEZseW5uLnN0eWxlLmRpc3BsYXk9XCJub25lXCI7XG4gICAgIFxuICB9ICBcbn07Il19</script></body></html>
